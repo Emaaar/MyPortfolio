@@ -57,30 +57,36 @@ export default function Portfolio() {
     <div className="min-h-screen bg-background">
       {/* Navigation */}
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'backdrop-blur-md bg-white/40 border-b border-[#0861A0]/10 shadow-sm' : 'bg-transparent'}`}>
-        <div className="container mx-auto px-4 py-4">
+        <div className="container mx-auto px-3 sm:px-4 py-3 sm:py-4">
           <div className="flex justify-between items-center">
-            <h1 className="text-xl font-bold text-[#0861A0]" style={{fontFamily: 'iBrand, sans-serif', fontWeight: '800'}}>marymharperez.</h1>
-            <div className="hidden md:flex items-center gap-6">
-              <a href="#services" className="text-muted-foreground hover:text-[#0861A0] transition-colors">Services</a>
-              <a href="#about" className="text-muted-foreground hover:text-[#0861A0] transition-colors">About</a>
-              <a href="#projects" className="text-muted-foreground hover:text-[#0861A0] transition-colors">Portfolio</a>
-              <a href="#blog" className="text-muted-foreground hover:text-[#0861A0] transition-colors">Blog</a>
-              <a href="#login" className="text-[#0861A0] hover:underline">Log In</a>
-              <a href="#contact" className="px-4 py-2 rounded-xl bg-[#0861A0] text-white hover:bg-[#064b7f] transition-colors">Book a Call</a>
+            <h1 className="text-lg sm:text-xl font-bold text-[#0861A0]" style={{fontFamily: 'iBrand, sans-serif', fontWeight: '800'}}>marymharperez.</h1>
+            <div className="hidden lg:flex items-center gap-4 xl:gap-6">
+              <a href="#services" className="text-sm xl:text-base text-muted-foreground hover:text-[#0861A0] transition-colors">Services</a>
+              <a href="#about" className="text-sm xl:text-base text-muted-foreground hover:text-[#0861A0] transition-colors">About</a>
+              <a href="#projects" className="text-sm xl:text-base text-muted-foreground hover:text-[#0861A0] transition-colors">Portfolio</a>
+              <a href="#blog" className="text-sm xl:text-base text-muted-foreground hover:text-[#0861A0] transition-colors">Blog</a>
+              <a href="#login" className="text-sm xl:text-base text-[#0861A0] hover:underline">Log In</a>
+              <a href="#contact" className="px-3 xl:px-4 py-2 rounded-xl bg-[#0861A0] text-white hover:bg-[#064b7f] transition-colors text-sm xl:text-base">Book a Call</a>
             </div>
+            {/* Mobile menu button */}
+            <button className="lg:hidden p-2 text-[#0861A0] hover:bg-[#0861A0]/10 rounded-lg transition-colors">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
           </div>
         </div>
       </nav>
       {/* spacer to offset fixed nav height */}
-      <div className="h-16"></div>
+      <div className="h-14 sm:h-16"></div>
 
       {/* Hero Section - Grafik style */}
-      <section className="relative py-10 md:py-16 px-4 overflow-hidden bg-white">
-        <DecorWaveAlt className="pointer-events-none absolute right-0 top-0 w-56 md:w-96 h-20 md:h-28 z-0 rotate-180" color="#84D3EB" opacity={0.35} />
+      <section className="relative py-8 sm:py-12 md:py-16 px-3 sm:px-4 overflow-hidden bg-white u-hero-pad-sm">
+        <DecorWaveAlt className="pointer-events-none absolute right-0 top-0 w-40 sm:w-56 md:w-96 h-16 sm:h-20 md:h-28 z-0 rotate-180" color="#84D3EB" opacity={0.35} />
         
         <div className="container mx-auto relative z-10">
-          <div className="grid md:grid-cols-2 gap-1 md:gap-0 items-center">
-          <div className="relative z-10 md:order-2 w-full md:w-[68vw] lg:w-[62vw] xl:w-[60vw] max-w-none mx-auto ml-0 md:-ml-28 lg:-ml-40 xl:-ml-[10rem] md:-translate-x-8 lg:-translate-x-12 xl:-translate-x-16 mt-0 md:-mt-2 justify-self-start md:justify-self-start md:scale-105 lg:scale-115 xl:scale-115 origin-left overflow-hidden group animate-slide-in-right animate-hero-in"> 
+          <div className="grid lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 items-center">
+          <div className="relative z-10 lg:order-2 w-full lg:w-[68vw] xl:w-[62vw] max-w-none mx-auto ml-0 lg:-ml-28 xl:-ml-40 lg:-translate-x-8 xl:-translate-x-12 mt-0 lg:-mt-2 u-hero-image-nudge justify-self-start lg:justify-self-start lg:scale-105 xl:scale-115 origin-left overflow-hidden group animate-slide-in-right animate-hero-in"> 
 
 <Image
   src="/heropic.png"
@@ -89,24 +95,24 @@ export default function Portfolio() {
   height={2000}
   quality={100}
   sizes="(min-width:1280px) 60vw, (min-width:1024px) 66vw, (min-width:768px) 72vw, 92vw"
-  className="w-full h-auto md:h-full object-cover transition-transform duration-500 ease-out will-change-transform cursor-zoom-in group-hover:scale-110 active:scale-110 animate-float-slow"
+  className="w-full h-auto lg:h-full object-cover transition-transform duration-500 ease-out will-change-transform cursor-zoom-in group-hover:scale-110 active:scale-110 animate-float-slow"
   priority
 />
 </div>
-            <div className="relative z-30 md:order-1 max-w-3xl md:max-w-4xl md:self-center md:-translate-y-4 lg:-translate-y-8 xl:-translate-y-10">
+            <div className="relative z-30 lg:order-1 max-w-2xl lg:max-w-3xl xl:max-w-4xl u-hero-text-balance u-hero-wide lg:self-center lg:-translate-y-4 xl:-translate-y-8">
               
-              <span className="text-sm font-semibold text-[#0861A0] uppercase tracking-wider">Hello</span>
-              <h1 className="mt-3 text-5xl md:text-7xl font-extrabold leading-tight tracking-tight text-[#0861A0]">I'm Mary Mhar Perez</h1>
-              <p className="mt-3 text-xl md:text-2xl font-semibold text-[#eac92d]">Full-Stack Developer | WordPress Developer | Graphic Designer</p>
-              <p className="mt-5 text-muted-foreground max-w-3xl leading-relaxed" style={{ textAlign: 'justify' }}>
+              <span className="text-xs sm:text-sm font-semibold text-[#0861A0] uppercase tracking-wider">Hello</span>
+              <h1 className="mt-2 sm:mt-3 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-tight tracking-tight text-[#0861A0] text-balance">I'm Mary Mhar Perez</h1>
+              <p className="mt-2 sm:mt-3 text-lg sm:text-xl lg:text-2xl font-semibold text-[#3eb2d9]">Full-Stack Developer | WordPress Developer | Graphic Designer</p>
+              <p className="mt-4 sm:mt-5 text-sm sm:text-base text-black max-w-2xl lg:max-w-3xl leading-relaxed" style={{ textAlign: 'justify' }}>
                 Fresh graduate and aspiring Full-Stack Developer with internship experience as a WordPress Developer. Skilled in building responsive web applications using Laravel, Django, and React, with a foundation in SQL and JavaScript. Strong background in UI/UX and graphic design, enabling me to create user-friendly and visually engaging solutions. Eager to contribute to a dynamic team where I can grow as a developer and apply both technical and creative skills.
               </p>
               
-              <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                <a href="#contact" className="px-6 py-3 rounded-xl bg-[#0861A0] text-white hover:bg-[#064b7f] transition-colors inline-flex items-center gap-2">
-                  Let’s Talk <ArrowRight className="w-5 h-5" />
+              <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
+                <a href="#contact" className="px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl bg-[#0861A0] text-white hover:bg-[#064b7f] transition-colors inline-flex items-center justify-center gap-2 text-sm sm:text-base">
+                  Let's Talk <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
                 </a>
-                <a href="#about" className="px-6 py-3 rounded-xl border border-[#0861A0] text-[#0861A0] hover:bg-[#0861A0] hover:text-white transition-colors">
+                <a href="#about" className="px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl border border-[#0861A0] text-[#0861A0] hover:bg-[#0861A0] hover:text-white transition-colors text-sm sm:text-base text-center">
                   Learn More
                 </a>
               </div>
@@ -115,7 +121,7 @@ export default function Portfolio() {
            
           </div>
         </div>
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 md:h-32 bg-gradient-to-b from-transparent to-[#0b62a1]/100 z-20"></div>
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-20 sm:h-24 md:h-32 bg-gradient-to-b from-transparent to-[#0b62a1]/100 z-20"></div>
       </section>
 
       {/* Testimonials */}
@@ -144,7 +150,7 @@ export default function Portfolio() {
             <h2 className="text-4xl md:text-5xl font-extrabold text-[#0861A0]">Featured Articles</h2>
             <a href="#" className="text-[#0861A0] hover:underline">More Blogs and Resources</a>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {[1,2,3].map((i) => (
               <div key={i} className="rounded-2xl overflow-hidden border border-[#84D3EB]/50 bg-white">
                 <div className="h-40 bg-[#BEE6F2]"></div>
@@ -180,23 +186,23 @@ export default function Portfolio() {
 
       
       {/* Services */}
-      <section id="services" className="py-20 px-4 bg-white relative overflow-hidden">
+      <section id="services" className="py-12 sm:py-16 lg:py-20 px-3 sm:px-4 bg-white relative overflow-hidden">
         <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-[#0861A0]">Services I Offer</h2>
-            <p className="mt-3 text-muted-foreground max-w-2xl mx-auto">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#0861A0] text-balance">Services I Offer</h2>
+            <p className="mt-3 text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
               Full‑stack delivery—from brand identity and interfaces to production‑ready code and launch.
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {[
               { title: "Branding & Design", desc: "Logo systems, design language, social graphics, presentation decks that look premium and consistent." },
               { title: "Web Development", desc: "Next.js + TypeScript. Accessible, fast, SEO‑ready sites with CMS and clean codebases you can scale." },
               { title: "Marketing & Content", desc: "Landing pages, campaign visuals, and copy that converts—aligned to your brand." },
             ].map((s) => (
-              <div key={s.title} className="rounded-2xl border border-[#84D3EB]/50 p-6 bg-white">
-                <h3 className="text-xl font-semibold text-[#0861A0]">{s.title}</h3>
-                <p className="mt-2 text-muted-foreground">{s.desc}</p>
+              <div key={s.title} className="rounded-2xl border border-[#84D3EB]/50 p-4 sm:p-6 bg-white">
+                <h3 className="text-lg sm:text-xl font-semibold text-[#0861A0]">{s.title}</h3>
+                <p className="mt-2 text-sm sm:text-base text-muted-foreground">{s.desc}</p>
               </div>
             ))}
           </div>
@@ -204,18 +210,18 @@ export default function Portfolio() {
       </section>
 
       {/* Mission & Vision */}
-      <section id="mission" className="py-20 px-4 bg-[#F8FCFE] relative overflow-hidden">
-        <div className="container mx-auto">
-          <div className="grid md:grid-cols-2 gap-8 items-start">
-            <div className="rounded-2xl bg-white border border-[#84D3EB]/50 p-8">
-              <h3 className="text-2xl font-bold text-[#0861A0]">My Mission</h3>
-              <p className="mt-3 text-muted-foreground">
+      <section id="mission" className="py-12 sm:py-16 lg:py-20 px-3 sm:px-4 bg-gradient-to-br from-[#F8FCFE] via-[#E8F4FD] to-[#D1E7F7] relative overflow-hidden">
+        <div className="container mx-auto relative z-10">
+          <div className="grid sm:grid-cols-2 gap-6 sm:gap-8 items-start">
+            <div className="rounded-2xl bg-white border border-[#84D3EB]/50 p-6 sm:p-8">
+              <h3 className="text-xl sm:text-2xl font-bold text-[#0861A0] text-balance">My Mission</h3>
+              <p className="mt-3 text-sm sm:text-base text-muted-foreground">
                 Empower founders and teams with design-first web experiences that are fast, accessible, and easy to manage.
               </p>
             </div>
-            <div className="rounded-2xl bg-white border border-[#84D3EB]/50 p-8">
-              <h3 className="text-2xl font-bold text-[#0861A0]">My Vision</h3>
-              <p className="mt-3 text-muted-foreground">
+            <div className="rounded-2xl bg-white border border-[#84D3EB]/50 p-6 sm:p-8">
+              <h3 className="text-xl sm:text-2xl font-bold text-[#0861A0] text-balance">My Vision</h3>
+              <p className="mt-3 text-sm sm:text-base text-muted-foreground">
                 Be a trusted partner who delivers clarity and momentum through thoughtful craftsmanship.
               </p>
             </div>
@@ -224,8 +230,8 @@ export default function Portfolio() {
       </section>
 
       {/* Who I Am */}
-      <section id="about" className="py-20 px-4 bg-white relative overflow-hidden">
-        <div className="container mx-auto">
+      <section id="about" className="py-20 px-4 bg-gradient-to-tr from-white via-[#F8FCFE] to-[#E8F4FD] relative overflow-hidden">
+        <div className="container mx-auto relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl md:text-5xl font-extrabold text-[#0861A0] mb-4">Who I Am</h2>
@@ -244,8 +250,8 @@ export default function Portfolio() {
       </section>
 
       {/* Process */}
-      <section id="process" className="py-20 px-4 bg-[#F8FCFE] relative overflow-hidden">
-        <div className="container mx-auto">
+      <section id="process" className="py-20 px-4 bg-gradient-to-tl from-[#F8FCFE] via-[#E8F4FD] to-[#D1E7F7] relative overflow-hidden">
+        <div className="container mx-auto relative z-10">
           <h2 className="text-4xl md:text-5xl font-extrabold text-center text-[#0861A0] mb-12">How We’ll Work</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {[
@@ -254,7 +260,7 @@ export default function Portfolio() {
               { step: "3", title: "Launch & Support", desc: "Deploy, measure, optimize, and maintain." },
             ].map((p) => (
               <div key={p.step} className="rounded-2xl bg-white border border-[#84D3EB]/50 p-6">
-                <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[#EAC928] text-[#0861A0] font-bold">{p.step}</div>
+                <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[#3eb2d9] text-[#ffff] font-bold">{p.step}</div>
                 <h3 className="mt-4 text-xl font-semibold text-[#0861A0]">{p.title}</h3>
                 <p className="mt-2 text-muted-foreground">{p.desc}</p>
               </div>
@@ -263,8 +269,9 @@ export default function Portfolio() {
         </div>
       </section>
 
-      <section id="about-me" className="py-20 px-4 bg-white">
-        <div className="container mx-auto">
+      <section id="about-me" className="py-20 px-4 bg-white relative overflow-hidden">
+        <DecorWaveAlt className="pointer-events-none absolute left-0 top-0 w-40 sm:w-56 md:w-96 h-16 sm:h-20 md:h-28 z-0" color="#84D3EB" opacity={0.35} />
+        <div className="container mx-auto relative z-10">
           <div className="text-center mb-16">
             <div className="inline-block">
               <span className="text-sm font-semibold text-[#0861A0] uppercase tracking-wider mb-4 block">
@@ -284,7 +291,7 @@ export default function Portfolio() {
                   height={800}
                   className="w-full h-auto object-cover object-center"
                   sizes="(min-width: 1024px) 50vw, 100vw"
-                  priority
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -337,8 +344,8 @@ export default function Portfolio() {
       </section>
 
       {/* Experience */}
-      <section id="experience" className="py-20 px-4 bg-white relative overflow-hidden">
-        <div className="container mx-auto">
+      <section id="experience" className="py-20 px-4 bg-gradient-to-r from-white via-[#F8FCFE] to-[#E8F4FD] relative overflow-hidden">
+        <div className="container mx-auto relative z-10">
           <h2 className="text-4xl md:text-5xl font-extrabold text-center text-[#0861A0] mb-12">Experience</h2>
           <div className="max-w-5xl mx-auto space-y-6">
             <div className="rounded-2xl border border-[#84D3EB]/50 p-6 bg-white">
@@ -374,10 +381,10 @@ export default function Portfolio() {
         </div>
       </section>
 
-      <section id="projects" className="py-20 px-4 bg-[#F8FCFE]">
-        <div className="container mx-auto">
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-12 text-center text-[#0861A0]">Web Development Projects</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <section id="projects" className="py-12 sm:py-16 lg:py-20 px-3 sm:px-4 bg-gradient-to-br from-[#F8FCFE] via-[#E8F4FD] to-[#D1E7F7] relative overflow-hidden">
+        <div className="container mx-auto relative z-10">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-8 sm:mb-12 text-center text-[#0861A0] text-balance">Web Development Projects</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {[
               {
                 title: "CoLink Connect",
@@ -413,6 +420,7 @@ export default function Portfolio() {
                     height={300}
                     className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                     sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-[#0861A0]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
@@ -444,7 +452,7 @@ export default function Portfolio() {
       <section id="designs" className="py-20 px-4 bg-white">
         <div className="container mx-auto">
           <h2 className="text-4xl md:text-5xl font-extrabold mb-12 text-center text-[#0861A0]">Graphic Design Showcase</h2>
-          <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+          <div className="columns-2 md:columns-3 lg:columns-4 gap-3 md:gap-4 space-y-3 md:space-y-4">
             {[
               { src: "/modern-brand-logo-design.jpg", height: "h-64" },
               { src: "/creative-poster-design.jpg", height: "h-80" },
@@ -466,6 +474,7 @@ export default function Portfolio() {
                   height={300}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-[#0861A0]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <ExternalLink className="w-8 h-8 text-white transform scale-0 group-hover:scale-100 transition-transform duration-300" />
@@ -477,12 +486,12 @@ export default function Portfolio() {
         </div>
       </section>
 
-      <section id="skills" className="py-20 px-4 bg-[#F8FCFE]">
-        <div className="container mx-auto">
+      <section id="skills" className="py-20 px-4 bg-gradient-to-l from-[#F8FCFE] via-[#E8F4FD] to-[#D1E7F7] relative overflow-hidden">
+        <div className="container mx-auto relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <div className="text-sm font-semibold text-[#0861A0] tracking-wider">— SKILLS</div>
-              <h2 className="mt-3 text-4xl md:text-5xl font-extrabold leading-tight text-[#0861A0]"><span className="text-[#EAC928]">I Develop Skills Regularly</span><br/>To Keep Me Update</h2>
+              <h2 className="mt-3 text-4xl md:text-5xl font-extrabold leading-tight text-[#0861A0]"><span className="text-[#3eb2d9]">I Develop Skills Regularly</span><br/>To Keep Me Update</h2>
               <p className="mt-6 text-muted-foreground max-w-xl">I take my time, I don’t force things, I just feel & absorb emotions that are floating around. I capture moments as they come. If my photos reflect the real atmosphere.</p>
               <ul className="mt-6 grid gap-4">
                 <li className="flex items-start gap-3">
@@ -653,8 +662,8 @@ export default function Portfolio() {
         </div>
       </section>
 
-      <section id="contact" className="py-20 px-4 bg-[#F8FCFE] relative overflow-hidden">
-        <div className="container mx-auto">
+      <section id="contact" className="py-20 px-4 bg-gradient-to-bl from-[#F8FCFE] via-[#E8F4FD] to-[#D1E7F7] relative overflow-hidden">
+        <div className="container mx-auto relative z-10">
           <h2 className="text-4xl md:text-5xl font-extrabold mb-12 text-center text-[#0861A0]">Let's Work Together</h2>
           <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
             <div className="glass-card rounded-3xl p-8 hover:glow transition-all duration-300">
@@ -677,6 +686,7 @@ export default function Portfolio() {
                 <a
                   href="https://www.linkedin.com/in/mary-mhar-perez/"
                   className="flex items-center gap-4 p-4 rounded-2xl glass transition-all duration-300 hover:scale-105 group"
+                  target="_blank" rel="noopener noreferrer"
                 >
                   <div className="p-3 rounded-xl bg-[#0861A0] group-hover:scale-110 transition-transform">
                     <Linkedin className="w-6 h-6 text-white" />
@@ -686,6 +696,7 @@ export default function Portfolio() {
                 <a
                   href="https://github.com/marymharperez"
                   className="flex items-center gap-4 p-4 rounded-2xl glass transition-all duration-300 hover:scale-105 group"
+                  target="_blank" rel="noopener noreferrer"
                 >
                   <div className="p-3 rounded-xl bg-[#0861A0] group-hover:scale-110 transition-transform">
                     <Github className="w-6 h-6 text-white" />
