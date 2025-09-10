@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Github, Linkedin, Mail, ExternalLink, Code, Palette, ArrowRight, CheckCircle2 } from "lucide-react"
 import Image from "next/image"
+import { DecorWaveAlt } from "@/components/decor-wave-alt"
 import {
   SiHtml5,
   SiCss3,
@@ -74,11 +75,12 @@ export default function Portfolio() {
       <div className="h-16"></div>
 
       {/* Hero Section - Grafik style */}
-      <section className="relative py-16 md:py-24 px-4 overflow-hidden bg-white">
+      <section className="relative py-10 md:py-16 px-4 overflow-hidden bg-white">
+        <DecorWaveAlt className="pointer-events-none absolute right-0 top-0 w-56 md:w-96 h-20 md:h-28 z-0 rotate-180" color="#84D3EB" opacity={0.35} />
         
         <div className="container mx-auto relative z-10">
           <div className="grid md:grid-cols-2 gap-1 md:gap-0 items-center">
-          <div className="relative z-10 md:order-2 w-full md:w-[72vw] lg:w-[66vw] xl:w-[60vw] max-w-none mx-auto ml-0 md:-ml-28 lg:-ml-40 xl:-ml-[10rem] md:-translate-x-8 lg:-translate-x-12 xl:-translate-x-16 mt-6 md:mt-0 justify-self-start md:justify-self-start md:scale-110 lg:scale-125 xl:scale-125 origin-left overflow-hidden group animate-slide-in-right"> 
+          <div className="relative z-10 md:order-2 w-full md:w-[68vw] lg:w-[62vw] xl:w-[60vw] max-w-none mx-auto ml-0 md:-ml-28 lg:-ml-40 xl:-ml-[10rem] md:-translate-x-8 lg:-translate-x-12 xl:-translate-x-16 mt-0 md:-mt-2 justify-self-start md:justify-self-start md:scale-105 lg:scale-115 xl:scale-115 origin-left overflow-hidden group animate-slide-in-right animate-hero-in"> 
 
 <Image
   src="/heropic.png"
@@ -87,16 +89,16 @@ export default function Portfolio() {
   height={2000}
   quality={100}
   sizes="(min-width:1280px) 60vw, (min-width:1024px) 66vw, (min-width:768px) 72vw, 92vw"
-  className="w-full h-auto md:h-full object-cover transition-transform duration-500 ease-out will-change-transform cursor-zoom-in group-hover:scale-110 active:scale-110"
+  className="w-full h-auto md:h-full object-cover transition-transform duration-500 ease-out will-change-transform cursor-zoom-in group-hover:scale-110 active:scale-110 animate-float-slow"
   priority
 />
 </div>
-            <div className="relative z-30 md:order-1 max-w-3xl md:max-w-4xl">
+            <div className="relative z-30 md:order-1 max-w-3xl md:max-w-4xl md:self-center md:-translate-y-4 lg:-translate-y-8 xl:-translate-y-10">
               
               <span className="text-sm font-semibold text-[#0861A0] uppercase tracking-wider">Hello</span>
-              <h1 className="mt-3 text-5xl md:text-6xl font-extrabold leading-tight text-[#0861A0]">I'm Mary Mhar Perez</h1>
+              <h1 className="mt-3 text-5xl md:text-7xl font-extrabold leading-tight tracking-tight text-[#0861A0]">I'm Mary Mhar Perez</h1>
               <p className="mt-3 text-xl md:text-2xl font-semibold text-[#eac92d]">Full-Stack Developer | WordPress Developer | Graphic Designer</p>
-              <p className="mt-5 text-muted-foreground max-w-3xl leading-relaxed">
+              <p className="mt-5 text-muted-foreground max-w-3xl leading-relaxed" style={{ textAlign: 'justify' }}>
                 Fresh graduate and aspiring Full-Stack Developer with internship experience as a WordPress Developer. Skilled in building responsive web applications using Laravel, Django, and React, with a foundation in SQL and JavaScript. Strong background in UI/UX and graphic design, enabling me to create user-friendly and visually engaging solutions. Eager to contribute to a dynamic team where I can grow as a developer and apply both technical and creative skills.
               </p>
               
@@ -113,7 +115,7 @@ export default function Portfolio() {
            
           </div>
         </div>
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 md:h-56 bg-gradient-to-b from-transparent to-[#0b62a1]/100 z-20"></div>
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 md:h-32 bg-gradient-to-b from-transparent to-[#0b62a1]/100 z-20"></div>
       </section>
 
       {/* Testimonials */}
