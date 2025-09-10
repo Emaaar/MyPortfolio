@@ -58,7 +58,7 @@ export default function Portfolio() {
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'backdrop-blur-md bg-white/40 border-b border-[#0861A0]/10 shadow-sm' : 'bg-transparent'}`}>
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
-            <h1 className="text-xl font-bold text-[#0861A0]" style={{fontFamily: 'iBrand, sans-serif', fontWeight: '800'}}>Mary Mhar Perez</h1>
+            <h1 className="text-xl font-bold text-[#0861A0]" style={{fontFamily: 'iBrand, sans-serif', fontWeight: '800'}}>marymharperez.</h1>
             <div className="hidden md:flex items-center gap-6">
               <a href="#services" className="text-muted-foreground hover:text-[#0861A0] transition-colors">Services</a>
               <a href="#about" className="text-muted-foreground hover:text-[#0861A0] transition-colors">About</a>
@@ -91,15 +91,13 @@ export default function Portfolio() {
   priority
 />
 </div>
-            <div className="relative z-30 md:order-1">
+            <div className="relative z-30 md:order-1 max-w-3xl md:max-w-4xl">
               
               <span className="text-sm font-semibold text-[#0861A0] uppercase tracking-wider">Hello</span>
-              <h1 className="mt-3 text-5xl md:text-6xl font-extrabold leading-tight text-[#0861A0]">I'm Mary Mhar</h1>
-              <p className="mt-3 text-xl md:text-2xl font-semibold text-[#eac92d]">Web Developer • UI/UX Designer • Graphic Designer</p>
-              <p className="mt-5 text-muted-foreground max-w-xl leading-relaxed">
-                Full‑Stack Developer focused on building internal tools, dashboards, and automations. I work across
-                UI/UX and backend with JavaScript, Python, and SQL—integrating APIs and shipping fast, maintainable
-                solutions. Certified in Laravel, Smart Contracts, and Microsoft Azure.
+              <h1 className="mt-3 text-5xl md:text-6xl font-extrabold leading-tight text-[#0861A0]">I'm Mary Mhar Perez</h1>
+              <p className="mt-3 text-xl md:text-2xl font-semibold text-[#eac92d]">Full-Stack Developer | WordPress Developer | Graphic Designer</p>
+              <p className="mt-5 text-muted-foreground max-w-3xl leading-relaxed">
+                Fresh graduate and aspiring Full-Stack Developer with internship experience as a WordPress Developer. Skilled in building responsive web applications using Laravel, Django, and React, with a foundation in SQL and JavaScript. Strong background in UI/UX and graphic design, enabling me to create user-friendly and visually engaging solutions. Eager to contribute to a dynamic team where I can grow as a developer and apply both technical and creative skills.
               </p>
               
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
@@ -336,30 +334,68 @@ export default function Portfolio() {
         </div>
       </section>
 
+      {/* Experience */}
+      <section id="experience" className="py-20 px-4 bg-white relative overflow-hidden">
+        <div className="container mx-auto">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-center text-[#0861A0] mb-12">Experience</h2>
+          <div className="max-w-5xl mx-auto space-y-6">
+            <div className="rounded-2xl border border-[#84D3EB]/50 p-6 bg-white">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+                <div>
+                  <h3 className="text-xl font-semibold text-[#0861A0]">Junior Developer (Intern) — Odysse.IO</h3>
+                  <div className="text-muted-foreground">WordPress, PHP, MySQL • 2024</div>
+                </div>
+                <div className="text-sm text-muted-foreground">Internship</div>
+              </div>
+              <ul className="mt-4 list-disc pl-5 text-muted-foreground space-y-2">
+                <li>Developed and maintained client websites using WordPress and PHP.</li>
+                <li>Collaborated with designers to implement responsive UI/UX layouts.</li>
+                <li>Improved site performance and optimized front-end components.</li>
+              </ul>
+            </div>
+
+            <div className="rounded-2xl border border-[#84D3EB]/50 p-6 bg-white">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+                <div>
+                  <h3 className="text-xl font-semibold text-[#0861A0]">Freelance Graphic Designer</h3>
+                  <div className="text-muted-foreground">Photoshop, Illustrator, Canva • Ongoing</div>
+                </div>
+                <div className="text-sm text-muted-foreground">Freelance</div>
+              </div>
+              <ul className="mt-4 list-disc pl-5 text-muted-foreground space-y-2">
+                <li>Designed logos, posters, and marketing materials aligned with client branding.</li>
+                <li>Delivered creative solutions tailored to client goals and timelines.</li>
+                <li>Edited photos using Adobe Lightroom and produced videos using CapCut.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="projects" className="py-20 px-4 bg-[#F8FCFE]">
         <div className="container mx-auto">
           <h2 className="text-4xl md:text-5xl font-extrabold mb-12 text-center text-[#0861A0]">Web Development Projects</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                title: "Colink Connect",
+                title: "CoLink Connect",
                 description:
-                  "Community intervention platform built with Laravel + MySQL for streamlined collaboration, service delivery, and user management.",
+                  "Laravel + MySQL platform that improved community communication and collaboration across services.",
                 tech: ["Laravel", "MySQL", "Blade", "Auth"],
                 image: "/placeholder.jpg",
               },
               {
                 title: "Argao Tourism Website",
                 description:
-                  "Tourism website for Argao, Cebu with user‑friendly navigation and visually engaging sections to showcase local attractions.",
-                tech: ["Next.js", "TypeScript", "Tailwind"],
+                  "Designed and built with WordPress, PHP, and Figma—helped increase engagement by providing tourism information online.",
+                tech: ["WordPress", "PHP", "Figma"],
                 image: "/web-banner-design.png",
               },
               {
                 title: "RedBit",
                 description:
-                  "Blockchain‑based blood donation platform using TypeScript, Next.js, Rust, and MongoDB; integrates smart contracts for secure, seamless donations.",
-                tech: ["Next.js", "TypeScript", "Rust", "MongoDB"],
+                  "Next.js + React + MongoDB + Solidity platform enabling secure, seamless blockchain‑based blood donations.",
+                tech: ["Next.js", "React", "MongoDB", "Solidity"],
                 image: "/placeholder.jpg",
               },
             ].map((project, index) => (
@@ -477,7 +513,15 @@ export default function Portfolio() {
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-[#0861A0] mt-1" />
-                  <span className="text-foreground"><strong className="text-[#0861A0]">Soft Skills:</strong> Problem solving, teamwork, communication, leadership, resilience</span>
+                  <span className="text-foreground"><strong className="text-[#0861A0]">Design Tools:</strong> Photoshop, Illustrator, Canva, Lightroom, CapCut</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-[#0861A0] mt-1" />
+                  <span className="text-foreground"><strong className="text-[#0861A0]">Tool Management:</strong> Google Calendar, Notion</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-[#0861A0] mt-1" />
+                  <span className="text-foreground"><strong className="text-[#0861A0]">Soft Skills:</strong> Problem Solving • Collaboration • Agile Methodologies • Leadership • Adaptability • Creativity</span>
                 </li>
               </ul>
               <a href="/resume.pdf" className="inline-flex items-center gap-2 mt-8 px-5 py-3 rounded-xl bg-[#0861A0] text-white hover:bg-[#064b7f] transition-colors">Download CV</a>
